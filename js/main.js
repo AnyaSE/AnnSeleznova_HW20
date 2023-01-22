@@ -2,13 +2,14 @@
 function generateTable() {
     const tbl = document.createElement("table");
     const tblBody = document.createElement("tbody");
+    let k = 1;
 
     for (let i=1; i<11; i++) {
         const row = document.createElement('tr');
 
-        for (let j = 0; j <1; j++) {
+        for (let j = 1; j <11; j++) {
             const cell = document.createElement("td");
-            const cellText = document.createTextNode(`${i} * 10 = ${i * 10}`);
+            const cellText = document.createTextNode(k++);
             cell.appendChild(cellText);
             row.appendChild(cell);
         }
